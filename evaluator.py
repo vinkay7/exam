@@ -255,7 +255,7 @@ class ModelEvaluator:
                           color='#e74c3c', alpha=0.7)
         
         axes[1, 1].set_title('Overall Metrics Comparison', fontsize=12, fontweight='bold')
-        axes[1, 1].set_ylabel('Score')
+        axes[1, 1].set_ylabel('Precision')
         axes[1, 1].set_xlabel('Metric Type')
         axes[1, 1].set_xticks(x)
         axes[1, 1].set_xticklabels(overall_metrics, rotation=45, ha='right')
