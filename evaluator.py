@@ -239,18 +239,16 @@ class ModelEvaluator:
             axes[row, col].grid(True, alpha=0.3)
         
         # Overall metrics comparison
-        overall_metrics = ['accuracy', 'macro avg', 'weighted avg']
-        metric_values = {'precision': [], 'recall': [], 'f1-score': []}
+        overall_metrics = ['macro avg', 'weighted avg']
         
-        for metric in ['precision', 'recall', 'f1-score']:
-            svm_vals = [svm_report[om][metric] if om in svm_report else svm_report['accuracy'] 
-                       for om in overall_metrics]
-            cnn_vals = [cnn_report[om][metric] if om in cnn_report else cnn_report['accuracy'] 
-                       for om in overall_metrics]
-            
-            x = np.arange(len(overall_metrics))
-            width = 0.35
-            
+        # Get values for macro and weighted averages
+        x = np.arange(len(overall_metrics))
+        width = 0.35
+        
+        svm_vals = [svm_report[om]['precision'] for om in overall_metrics if om in svm_report]
+        cnn_vals = [cnn_report[om]['precision'] for om in overall_metrics if om in cnn_report]
+        
+        if svm_vals and cnn_vals:
             axes[1, 1].bar(x - width/2, svm_vals, width, label='SVM + HOG', 
                           color='#3498db', alpha=0.7)
             axes[1, 1].bar(x + width/2, cnn_vals, width, label='CNN', 
