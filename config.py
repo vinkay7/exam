@@ -57,7 +57,7 @@ CNN_CONFIG = {
         'batch_size': 32,
         'validation_split': 0.2,
         'early_stopping': {
-            'monitor': 'val_loss',
+            'monitor': 'val_accuracy',
             'patience': 10,
             'restore_best_weights': True
         }
