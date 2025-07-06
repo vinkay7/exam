@@ -52,7 +52,7 @@ class SVMHOGModel:
                     cells_per_block=self.hog_params['cells_per_block'],
                     block_norm=self.hog_params['block_norm'],
                     visualize=self.hog_params['visualize'],
-                    multichannel=False  # We're using grayscale
+                    channel_axis=None  # For grayscale images
                 )
                 
                 features.append(hog_features)
