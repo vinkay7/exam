@@ -12,8 +12,7 @@
         2
       ],
       "block_norm": "L2-Hys",
-      "visualize": false,
-      "multichannel": true
+      "visualize": false
     },
     "svm_params": {
       "C": 1.0,
@@ -23,7 +22,7 @@
       "probability": true
     },
     "is_trained": true,
-    "training_time": 0.017716646194458008
+    "training_time": 0.018765926361083984
   },
   "cnn_model": {
     "model_type": "CNN",
@@ -101,7 +100,7 @@
       "fill_mode": "nearest"
     },
     "is_trained": true,
-    "training_time": 26.233015298843384,
+    "training_time": 27.285933017730713,
     "num_parameters": 3313091
   },
   "dataset_info": {
@@ -119,9 +118,9 @@
   "results_summary": {
     "svm_accuracy": 0.3333333333333333,
     "cnn_accuracy": 1.0,
-    "svm_training_time": 0.017716646194458008,
-    "cnn_training_time": 26.233015298843384,
-    "svm_inference_time": 0.0002225637435913086,
-    "cnn_inference_time": 0.01987605889638265
+    "svm_training_time": 0.018765926361083984,
+    "cnn_training_time": 27.285933017730713,
+    "svm_inference_time": 0.0019004901250203451,
+    "cnn_inference_time": 0.03323960304260254
   }
 }
