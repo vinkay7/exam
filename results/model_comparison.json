@@ -22,7 +22,7 @@
       "probability": true
     },
     "is_trained": true,
-    "training_time": 0.018765926361083984
+    "training_time": 0.05715370178222656
   },
   "cnn_model": {
     "model_type": "CNN",
@@ -100,7 +100,7 @@
       "fill_mode": "nearest"
     },
     "is_trained": true,
-    "training_time": 27.285933017730713,
+    "training_time": 26.917386770248413,
     "num_parameters": 3313091
   },
   "dataset_info": {
@@ -118,9 +118,9 @@
   "results_summary": {
     "svm_accuracy": 0.3333333333333333,
     "cnn_accuracy": 1.0,
-    "svm_training_time": 0.018765926361083984,
-    "cnn_training_time": 27.285933017730713,
-    "svm_inference_time": 0.0019004901250203451,
-    "cnn_inference_time": 0.03323960304260254
+    "svm_training_time": 0.05715370178222656,
+    "cnn_training_time": 26.917386770248413,
+    "svm_inference_time": 0.0007758458455403646,
+    "cnn_inference_time": 0.0283371369043986
   }
 }
