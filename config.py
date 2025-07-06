@@ -19,7 +19,6 @@ SVM_HOG_CONFIG = {
         'cells_per_block': (2, 2),  # Number of cells in each block
         'block_norm': 'L2-Hys',  # Normalization method
         'visualize': False,
-        'multichannel': True,
     },
     'svm_params': {
         'C': 1.0,  # Regularization parameter
