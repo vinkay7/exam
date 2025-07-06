@@ -44,6 +44,12 @@ class SVMHOGModel:
                 else:
                     gray = img
                 
+                # Ensure image is valid for HOG
+                if gray.shape[0] < 32 or gray.shape[1] < 32:
+                    print(f"Warning: Image too small for HOG: {gray.shape}")
+                    features.append(np.zeros(1296))  # Default HOG feature size
+                    continue
+                
                 # Extract HOG features
                 hog_features = hog(
                     gray,
@@ -51,8 +57,7 @@ class SVMHOGModel:
                     pixels_per_cell=self.hog_params['pixels_per_cell'],
                     cells_per_block=self.hog_params['cells_per_block'],
                     block_norm=self.hog_params['block_norm'],
-                    visualize=self.hog_params['visualize'],
-                    channel_axis=None  # For grayscale images
+                    visualize=self.hog_params['visualize']
                 )
                 
                 features.append(hog_features)
@@ -60,7 +65,7 @@ class SVMHOGModel:
             except Exception as e:
                 print(f"Error extracting HOG features: {e}")
                 # Use zero features as fallback
-                features.append(np.zeros(324))  # Default HOG feature size
+                features.append(np.zeros(1296))  # Default HOG feature size
         
         return np.array(features)
     
